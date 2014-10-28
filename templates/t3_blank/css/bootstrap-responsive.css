@@ -58,7 +58,8 @@
 
 @media (min-width: 1200px) {
   .row {
-    margin-left: -40px;
+    /* ##edit margin-left: -40px; 
+    edit is in Additions in template.css*/
     *zoom: 1;
   }
   .row:before,
@@ -79,7 +80,8 @@
   .navbar-static-top .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
-    width: 1196px;
+    /*##old width: 1196px;*/
+    /*##new*/ width: 100%;
   }
   .span12 {
     width: 1196px;
@@ -384,7 +386,8 @@
 
 @media (min-width: 768px) and (max-width: 979px) {
   .row {
-    margin-left: -20px;
+    /* ##edit margin-left: -40px; 
+    edit is in Additions in template.css*/
     *zoom: 1;
   }
   .row:before,
