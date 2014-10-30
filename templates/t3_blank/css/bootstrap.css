@@ -4373,7 +4373,6 @@ input[type="submit"].btn.btn-mini {
 .nav > li.dropdown.open.active > a:hover,
 .nav > li.dropdown.open.active > a:focus {
   color: #fff;
-  background-color: #999;
   border-color: #999;
 }
 .nav li.dropdown.open .caret,
