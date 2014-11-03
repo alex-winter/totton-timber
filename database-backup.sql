@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 03, 2014 at 12:59 PM
+-- Generation Time: Nov 03, 2014 at 06:00 PM
 -- Server version: 5.6.15-log
 -- PHP Version: 5.5.8
 
@@ -1399,7 +1399,14 @@ CREATE TABLE IF NOT EXISTS `ttj_hikashop_cart` (
   PRIMARY KEY (`cart_id`),
   KEY `user_id` (`user_id`),
   KEY `session_id` (`session_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `ttj_hikashop_cart`
+--
+
+INSERT INTO `ttj_hikashop_cart` (`cart_id`, `user_id`, `session_id`, `cart_modified`, `cart_coupon`, `cart_type`, `cart_current`, `cart_share`, `cart_name`, `cart_params`) VALUES
+(1, 0, 'lm68nqskl9pir3br70i9savt40', 1415032629, '', 'cart', 0, 'nobody', '', '');
 
 -- --------------------------------------------------------
 
@@ -1418,7 +1425,15 @@ CREATE TABLE IF NOT EXISTS `ttj_hikashop_cart_product` (
   `cart_product_wishlist_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`cart_product_id`),
   KEY `cart_id` (`cart_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `ttj_hikashop_cart_product`
+--
+
+INSERT INTO `ttj_hikashop_cart_product` (`cart_product_id`, `cart_id`, `product_id`, `cart_product_quantity`, `cart_product_parent_id`, `cart_product_modified`, `cart_product_option_parent_id`, `cart_product_wishlist_id`) VALUES
+(1, 1, 2, 5, 0, 1415016843, 0, 0),
+(2, 1, 3, 1, 0, 1415021450, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1670,7 +1685,7 @@ INSERT INTO `ttj_hikashop_config` (`config_namekey`, `config_value`, `config_def
 ('catalogue', '0', '0'),
 ('redirect_url_after_add_cart', 'checkout', 'checkout'),
 ('redirect_url_when_cart_is_empty', '', ''),
-('cart_retaining_period_checked', '1414671505', ''),
+('cart_retaining_period_checked', '1415021177', ''),
 ('auto_submit_methods', '1', '1'),
 ('clean_cart_when_order_created', 'order_confirmed', 'order_confirmed'),
 ('category_image', '1', '1'),
@@ -2089,7 +2104,7 @@ CREATE TABLE IF NOT EXISTS `ttj_hikashop_file` (
   `file_limit` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`file_id`),
   KEY `file_type` (`file_type`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=44 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=45 ;
 
 --
 -- Dumping data for table `ttj_hikashop_file`
@@ -2138,7 +2153,8 @@ INSERT INTO `ttj_hikashop_file` (`file_id`, `file_name`, `file_description`, `fi
 (40, '', '', 'kni_flush_door_w_sty_gro.jpg', 'category', 52, 0, 0, 0),
 (41, '', '', 'p0321_165806_00_pp_300wx300h.jpg', 'category', 53, 0, 0, 0),
 (42, '', '', 'image_7579.jpg', 'product', 1, 0, 0, 0),
-(43, '', '', 'mw_prodcat_bullnose_18717.jpg', 'product', 2, 0, 0, 0);
+(43, '', '', 'mw_prodcat_bullnose_18717.jpg', 'product', 2, 0, 0, 0),
+(44, '', '', 'timberplaned.jpg', 'product', 3, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2392,7 +2408,7 @@ CREATE TABLE IF NOT EXISTS `ttj_hikashop_price` (
   `price_site_id` varchar(255) DEFAULT '',
   PRIMARY KEY (`price_id`),
   KEY `price_product_id` (`price_product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `ttj_hikashop_price`
@@ -2400,7 +2416,8 @@ CREATE TABLE IF NOT EXISTS `ttj_hikashop_price` (
 
 INSERT INTO `ttj_hikashop_price` (`price_id`, `price_currency_id`, `price_product_id`, `price_value`, `price_min_quantity`, `price_access`, `price_site_id`) VALUES
 (1, 4, 1, '16.66667', 0, 'all', ''),
-(2, 4, 2, '14.00000', 0, 'all', '');
+(2, 4, 2, '14.00000', 0, 'all', ''),
+(3, 4, 3, '13.00000', 0, 'all', '');
 
 -- --------------------------------------------------------
 
@@ -2458,7 +2475,7 @@ CREATE TABLE IF NOT EXISTS `ttj_hikashop_product` (
   UNIQUE KEY `product_code` (`product_code`),
   KEY `product_parent_id` (`product_parent_id`),
   KEY `product_main_index` (`product_type`,`product_quantity`,`product_published`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `ttj_hikashop_product`
@@ -2466,7 +2483,8 @@ CREATE TABLE IF NOT EXISTS `ttj_hikashop_product` (
 
 INSERT INTO `ttj_hikashop_product` (`product_id`, `product_parent_id`, `product_name`, `product_description`, `product_quantity`, `product_code`, `product_published`, `product_hit`, `product_created`, `product_sale_start`, `product_sale_end`, `product_delay_id`, `product_tax_id`, `product_type`, `product_vendor_id`, `product_manufacturer_id`, `product_url`, `product_weight`, `product_keywords`, `product_weight_unit`, `product_modified`, `product_meta_description`, `product_dimension_unit`, `product_width`, `product_length`, `product_height`, `product_max_per_order`, `product_access`, `product_group_after_purchase`, `product_min_per_order`, `product_contact`, `product_display_quantity_field`, `product_last_seen_date`, `product_sales`, `product_waitlist`, `product_layout`, `product_average_score`, `product_total_vote`, `product_page_title`, `product_alias`, `product_price_percentage`, `product_msrp`, `product_canonical`, `product_warehouse_id`, `product_quantity_layout`) VALUES
 (1, 0, 'some sapele timber', '<p>nice bit of sapele timber.</p>', -1, '230948u23', 1, 3, 1414599313, 0, 0, 0, 11, 'main', 0, 0, '', '100.000', 'some sapele', 'kg', 1414599313, 'some sapele', 'm', '12.000', '123.000', '123.000', 0, 'all', '', 0, 0, 0, 1414665330, 0, 0, '', 0, 0, 'some sapele wood', 'some-sapele-timber', '0.0000000', '10.0000000', '', 0, ''),
-(2, 0, 'bullnose moulding', '<p>This is a very nice wooden bullnose moulding, looks great on stairs and stuff?</p>', -1, 'bullnose_moulding', 1, 0, 1414689788, 0, 0, 0, 11, 'main', 0, 0, '', '0.000', '', 'kg', 1414690313, '', 'm', '0.000', '0.000', '0.000', 0, 'all', '', 0, 0, 0, 0, 0, 0, '', 0, 0, 'bullnose moulding', 'bullnose-moulding', '0.0000000', '0.0000000', '', 0, '');
+(2, 0, 'bullnose moulding', '<p>This is a very nice wooden bullnose moulding, looks great on stairs and stuff?</p>', -1, 'bullnose_moulding', 1, 0, 1414689788, 0, 0, 0, 11, 'main', 0, 0, '', '0.000', '', 'kg', 1414690313, '', 'm', '0.000', '0.000', '0.000', 0, 'all', '', 0, 0, 0, 0, 0, 0, '', 0, 0, 'bullnose moulding', 'bullnose-moulding', '0.0000000', '0.0000000', '', 0, ''),
+(3, 0, 'some softwood', '<p>This is a nice plank of planed wood very high standard timber. </p>', -1, 'some_softwood', 1, 0, 1415021401, 0, 0, 0, 11, 'main', 0, 0, '', '0.000', '', 'kg', 1415021401, '', 'm', '0.000', '0.000', '0.000', 0, 'all', '', 0, 0, 0, 0, 0, 0, '', 0, 0, 'Some planed timber softwood', 'some-softwood', '0.0000000', '0.0000000', '', 0, '');
 
 -- --------------------------------------------------------
 
@@ -2482,7 +2500,7 @@ CREATE TABLE IF NOT EXISTS `ttj_hikashop_product_category` (
   PRIMARY KEY (`product_category_id`),
   UNIQUE KEY `category_id` (`category_id`,`product_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `ttj_hikashop_product_category`
@@ -2490,7 +2508,8 @@ CREATE TABLE IF NOT EXISTS `ttj_hikashop_product_category` (
 
 INSERT INTO `ttj_hikashop_product_category` (`product_category_id`, `category_id`, `product_id`, `ordering`) VALUES
 (1, 19, 1, 1),
-(2, 24, 2, 1);
+(2, 24, 2, 1),
+(3, 20, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -11614,8 +11633,8 @@ CREATE TABLE IF NOT EXISTS `ttj_session` (
 --
 
 INSERT INTO `ttj_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-('lm68nqskl9pir3br70i9savt40', 0, 1, '1415015908', '__default|a:8:{s:15:"session.counter";i:3;s:19:"session.timer.start";i:1415015865;s:18:"session.timer.last";i:1415015880;s:17:"session.timer.now";i:1415015907;s:22:"session.client.browser";s:109:"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36";s:8:"registry";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":1:{s:12:"com_hikashop";O:8:"stdClass":4:{s:12:"ssl_redirect";i:0;s:7:"zone_id";s:3:"222";s:7:"user_id";i:0;s:7:"cart_id";i:0;}}}s:4:"user";O:5:"JUser":25:{s:9:"\\0\\0\\0isRoot";N;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:1:{i:0;s:1:"9";}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:12:"requireReset";N;s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:14:"\\0\\0\\0_authGroups";N;s:14:"\\0\\0\\0_authLevels";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;}s:13:"session.token";s:32:"2db8e82deb9b0c5bc68dda4bb9243ac4";}', 0, ''),
-('dce9dscbkuq5kblrecs0jvb0c6', 1, 0, '1415015906', '__default|a:8:{s:15:"session.counter";i:19;s:19:"session.timer.start";i:1415015571;s:18:"session.timer.last";i:1415015904;s:17:"session.timer.now";i:1415015905;s:22:"session.client.browser";s:109:"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36";s:8:"registry";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":4:{s:11:"application";O:8:"stdClass":1:{s:4:"lang";s:5:"en-GB";}s:11:"com_modules";O:8:"stdClass":3:{s:7:"modules";O:8:"stdClass":1:{s:6:"filter";O:8:"stdClass":1:{s:18:"client_id_previous";i:0;}}s:4:"edit";O:8:"stdClass":1:{s:6:"module";O:8:"stdClass":2:{s:2:"id";a:0:{}s:4:"data";N;}}s:3:"add";O:8:"stdClass":1:{s:6:"module";O:8:"stdClass":2:{s:12:"extension_id";N;s:6:"params";N;}}}s:13:"com_templates";O:8:"stdClass":1:{s:4:"edit";O:8:"stdClass":1:{s:5:"style";O:8:"stdClass":2:{s:2:"id";a:1:{i:0;i:9;}s:4:"data";N;}}}s:13:"com_installer";O:8:"stdClass":2:{s:7:"message";s:0:"";s:17:"extension_message";s:0:"";}}}s:4:"user";O:5:"JUser":27:{s:9:"\\0\\0\\0isRoot";b:1;s:2:"id";s:3:"784";s:4:"name";s:10:"Super User";s:8:"username";s:7:"ttadmin";s:5:"email";s:26:"alex.winter@techbods.co.uk";s:8:"password";s:60:"$2y$10$MCWB550fTt6DI4TL6j8hq.N8VKGlZa7BoZOSoRSSHdwGqXPjhZJui";s:14:"password_clear";s:0:"";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2014-10-25 14:38:19";s:13:"lastvisitDate";s:19:"2014-11-03 10:52:58";s:10:"activation";s:1:"0";s:6:"params";s:0:"";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:12:"requireReset";s:1:"0";s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\\0\\0\\0_authLevels";a:5:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;i:4;i:6;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;s:6:"otpKey";s:0:"";s:4:"otep";s:0:"";}s:13:"session.token";s:32:"e93b3a32a69b10437dc0819de456b090";}', 784, 'ttadmin');
+('lm68nqskl9pir3br70i9savt40', 0, 1, '1415033670', '__default|a:8:{s:15:"session.counter";i:53;s:19:"session.timer.start";i:1415027116;s:18:"session.timer.last";i:1415033663;s:17:"session.timer.now";i:1415033669;s:22:"session.client.browser";s:109:"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36";s:8:"registry";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":1:{s:12:"com_hikashop";O:8:"stdClass":11:{s:7:"cart_id";i:1;s:7:"zone_id";s:3:"222";s:7:"user_id";i:0;s:12:"ssl_redirect";i:0;s:15:"shipping_method";N;s:11:"shipping_id";N;s:13:"shipping_data";N;s:8:"cart_new";s:1:"1";s:14:"payment_method";N;s:10:"payment_id";N;s:12:"payment_data";N;}}}s:4:"user";O:5:"JUser":25:{s:9:"\\0\\0\\0isRoot";b:0;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:1:{i:0;s:1:"9";}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:12:"requireReset";N;s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:9;}s:14:"\\0\\0\\0_authLevels";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;}s:13:"session.token";s:32:"e01b3c0820218bc563848a967abcf0c0";}', 0, ''),
+('dce9dscbkuq5kblrecs0jvb0c6', 1, 0, '1415033345', '__default|a:8:{s:15:"session.counter";i:15;s:19:"session.timer.start";i:1415027431;s:18:"session.timer.last";i:1415032504;s:17:"session.timer.now";i:1415033344;s:22:"session.client.browser";s:109:"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36";s:8:"registry";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":2:{s:11:"application";O:8:"stdClass":1:{s:4:"lang";s:5:"en-GB";}s:13:"com_templates";O:8:"stdClass":1:{s:4:"edit";O:8:"stdClass":1:{s:5:"style";O:8:"stdClass":2:{s:2:"id";a:1:{i:0;i:9;}s:4:"data";N;}}}}}s:4:"user";O:5:"JUser":27:{s:9:"\\0\\0\\0isRoot";b:1;s:2:"id";s:3:"784";s:4:"name";s:10:"Super User";s:8:"username";s:7:"ttadmin";s:5:"email";s:26:"alex.winter@techbods.co.uk";s:8:"password";s:60:"$2y$10$MCWB550fTt6DI4TL6j8hq.N8VKGlZa7BoZOSoRSSHdwGqXPjhZJui";s:14:"password_clear";s:0:"";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2014-10-25 14:38:19";s:13:"lastvisitDate";s:19:"2014-11-03 13:26:17";s:10:"activation";s:1:"0";s:6:"params";s:0:"";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:12:"requireReset";s:1:"0";s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\\0\\0\\0_authLevels";a:5:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;i:4;i:6;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;s:6:"otpKey";s:0:"";s:4:"otep";s:0:"";}s:13:"session.token";s:32:"20eac20c607e93178403fc314bc03751";}', 784, 'ttadmin');
 
 -- --------------------------------------------------------
 
@@ -11695,7 +11714,7 @@ CREATE TABLE IF NOT EXISTS `ttj_template_styles` (
 
 INSERT INTO `ttj_template_styles` (`id`, `template`, `client_id`, `home`, `title`, `params`) VALUES
 (8, 'isis', 1, '1', 'isis - Default', '{"templateColor":"","logoFile":""}'),
-(9, 't3_blank', 0, '1', 't3_blank - Default', '{"t3_template":"1","devmode":"0","themermode":"1","responsive":"1","build_rtl":"0","t3-assets":"t3-assets","t3-rmvlogo":"1","minify":"0","minify_js":"0","minify_js_tool":"jsmin","minify_exclude":"","link_titles":"","theme":"","logotype":"image","sitename":"","slogan":"","logoimage":"images\\/totton-timber-logo.jpg","enable_logoimage_sm":"0","logoimage_sm":"","mainlayout":"home-2","navigation_trigger":"hover","navigation_collapse_offcanvas":"1","navigation_collapse_showsub":"1","navigation_type":"joomla","navigation_animation":"","navigation_animation_duration":"400","mm_type":"mainmenu","mm_config":"","snippet_open_head":"","snippet_close_head":"<script src=\\"\\/\\/ajax.googleapis.com\\/ajax\\/libs\\/jquery\\/2.1.1\\/jquery.min.js\\"><\\/script>\\r\\n<script src=\\"plugins\\/hikashop\\/js\\/cat-nav.js\\"><\\/script>\\r\\n<script src=\\"\\/\\/ajax.googleapis.com\\/ajax\\/libs\\/jqueryui\\/1.11.2\\/jquery-ui.min.js\\"><\\/script>","snippet_open_body":"","snippet_close_body":"","snippet_debug":"0"}');
+(9, 't3_blank', 0, '1', 't3_blank - Default', '{"t3_template":"1","devmode":"0","themermode":"1","responsive":"1","build_rtl":"0","t3-assets":"t3-assets","t3-rmvlogo":"1","minify":"0","minify_js":"0","minify_js_tool":"jsmin","minify_exclude":"","link_titles":"","theme":"","logotype":"image","sitename":"","slogan":"","logoimage":"images\\/totton-timber-logo.jpg","enable_logoimage_sm":"0","logoimage_sm":"","mainlayout":"home-2","navigation_trigger":"hover","navigation_collapse_offcanvas":"1","navigation_collapse_showsub":"1","navigation_type":"joomla","navigation_animation":"","navigation_animation_duration":"400","mm_type":"mainmenu","mm_config":"","snippet_open_head":"","snippet_close_head":"<script src=\\"\\/\\/ajax.googleapis.com\\/ajax\\/libs\\/jquery\\/2.1.1\\/jquery.min.js\\"><\\/script>\\r\\n<script src=\\"plugins\\/hikashop\\/js\\/cat-nav.js\\"><\\/script>\\r\\n<script src=\\"\\/\\/ajax.googleapis.com\\/ajax\\/libs\\/jqueryui\\/1.11.2\\/jquery-ui.min.js\\"><\\/script>\\r\\n<link href=\\"\\/\\/maxcdn.bootstrapcdn.com\\/font-awesome\\/4.2.0\\/css\\/font-awesome.min.css\\" rel=\\"stylesheet\\">","snippet_open_body":"","snippet_close_body":"","snippet_debug":"0"}');
 
 -- --------------------------------------------------------
 
@@ -12088,7 +12107,7 @@ CREATE TABLE IF NOT EXISTS `ttj_users` (
 --
 
 INSERT INTO `ttj_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-(784, 'Super User', 'ttadmin', 'alex.winter@techbods.co.uk', '$2y$10$MCWB550fTt6DI4TL6j8hq.N8VKGlZa7BoZOSoRSSHdwGqXPjhZJui', 0, 1, '2014-10-25 14:38:19', '2014-11-03 11:52:53', '0', '', '0000-00-00 00:00:00', 0, '', '', 0);
+(784, 'Super User', 'ttadmin', 'alex.winter@techbods.co.uk', '$2y$10$MCWB550fTt6DI4TL6j8hq.N8VKGlZa7BoZOSoRSSHdwGqXPjhZJui', 0, 1, '2014-10-25 14:38:19', '2014-11-03 15:10:33', '0', '', '0000-00-00 00:00:00', 0, '', '', 0);
 
 -- --------------------------------------------------------
 

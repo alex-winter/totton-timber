@@ -194,6 +194,15 @@ if(empty($this->rows)){
 			$form = 'hikashop_cart_form';
 		}
 	?>
+	<div class="">
+		<a class="btn btn-success"><i class="fa fa-shopping-cart">&nbsp;</i> View Cart</a>
+		<script type="text/javascript">jQuery(function(){var x=0;jQuery(".hikashop_cart_module .hikashop_product_quantity_field").each(function(){var i=parseInt(jQuery(this).val());x=x+i;});jQuery(".cart-total-qty").text(x+" Items");});</script>
+		<div class="">
+			<p class="cart-total-qty"></p>
+			<p><?php $this->row=$this->total; echo $this->loadTemplate() ?></p>
+		</div>
+	</div>	
+
 	<form action="<?php echo hikashop_completeLink('product&task=updatecart'.$url_itemid,false,true); ?>" method="post" name="<?php echo $form;?>">
 		<table width="100%">
 			<thead>
@@ -604,7 +613,7 @@ if(empty($this->rows)){
 				</noscript>
 			<?php }
 		if($this->params->get('cart_type','cart') != 'wishlist'  && $this->params->get('from','display') == 'module'){
-			if($this->params->get('show_cart_proceed',1)) echo $this->cart->displayButton(JText::_('PROCEED_TO_CHECKOUT'),'checkout',$this->params,$url_checkout,'');
+			// ## DELETE if($this->params->get('show_cart_proceed',1)) echo $this->cart->displayButton(JText::_('PROCEED_TO_CHECKOUT'),'checkout',$this->params,$url_checkout,'');
 		}
 		else{
 			?><div class="hikashop_display_cart_show_convert_button"><?php

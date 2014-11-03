@@ -3010,7 +3010,7 @@ table.adminlist th a {
 }
 .head-search {
   float: right;
-  margin-top: 20px;
+  /* ##delete margin-top: 20px;*/
 }
 .head-search form {
   margin: 0;
@@ -3180,7 +3180,7 @@ span {
 
       }
   .hikashop_cart_module {
-    position: absolute;
+    position: relative;
     top: 0;
     background: #BABABA;
     padding: 20px;
@@ -3194,19 +3194,19 @@ span {
         width: 100%;
       }
         .hikashop_cart form table {
-          display: none;
+          display: table;
         }
           .hikashop_cart form table thead {
-            
+            width: 100%;
           }
             .hikashop_cart form table thead tr {
               
             }
               .hikashop_cart form table thead tr > th {
-                
+                background: transparent;
               }
           .hikashop_cart form table tbody {
-            
+            width: 100%;
           }
             .hikashop_cart form table tbody > tr {
               
@@ -3224,7 +3224,7 @@ span {
                   
                 }    
           .hikashop_cart form table tfoot {
-            
+            width: 100%;
           }
             .hikashop_cart form table tfoot > tr {
               
