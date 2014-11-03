@@ -2965,6 +2965,8 @@ table.adminlist th a {
   padding-bottom: 20px;
   */
   background: #c10505;
+  position: relative;
+  height: 150px;
 }
 .logo {
   float: left;
@@ -2973,6 +2975,7 @@ table.adminlist th a {
   display: inline-block;
   line-height: 1;
   margin: 0;
+  height: 100%;
 }
 .logo-image {
   overflow: hidden;
@@ -2980,6 +2983,9 @@ table.adminlist th a {
 .logo-image a {
   background-repeat: no-repeat;
   width: 204px;
+  height: 100%;
+}
+.logo-image a img {
   height: 100%;
 }
 .logo-image span,
@@ -3127,9 +3133,7 @@ span {
   margin-bottom: 10px;
 }
 
-.t3-header {
-  position: relative;
-}
+
 
 .t3-mainnav {
   background: #bababa;
