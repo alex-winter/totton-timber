@@ -2949,6 +2949,46 @@ span {
         color: #fff;
       }
 
+  .hikashop_container {
+    margin: 15px;
+  }
+    .hikashop_subcontainer.thumbnail {
+      height: auto;
+      position: relative;
+      padding: 0px;
+      border: 0px;
+    }
+      .hikashop_subcontainer.thumbnail .hikashop_category_image {
+        height: 100%;
+      }
+        .hikashop_subcontainer.thumbnail .hikashop_category_image a {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+          .hikashop_subcontainer.thumbnail .hikashop_category_image a img.hikashop_product_listing_image {
+            width: 100%;
+            border-radius: 5px;
+          }
+      .hikashop_subcontainer.thumbnail .hikashop_category_name {
+        position: absolute;
+        width: 100%;
+        background: rgba(0, 160, 4, 0.8);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        border-radius: 0 0 5px 5px;
+      }
+        .hikashop_subcontainer.thumbnail .hikashop_category_name a {
+          display: block;
+          margin: 0;
+          width: 100%;
+          height: 100%;
+          margin: 20px auto;
+          color: #fff;
+          font-size: 1.2em;
+        }
 /* end ADDITIONS */
 
 /* begin HIKASHOP */
