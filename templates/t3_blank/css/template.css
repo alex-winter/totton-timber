@@ -2950,7 +2950,7 @@ span {
             padding: 10px 50px;
             background-color: #cfcfcf;
           }
-
+/* end ADDITIONS */
 
       .category_nav .nav .active > a {
         background-color: #e20000;
@@ -2960,7 +2960,6 @@ span {
         background-color: #ff0000;
         color: #fff;
       }
-
 
   .hikashop_container {
     margin: 15px;
@@ -3007,6 +3006,9 @@ span {
 
 /* begin HIKASHOP */
 
+  /* begin CHECKOUT */
+
+  .hikashop_cart_module {
   /* begin CHECKOUT */
 
   .hikashop_cart_module {
