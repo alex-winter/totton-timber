@@ -3008,10 +3008,10 @@ span {
 
   /* begin CHECKOUT */
 
-  .hikashop_cart_module {
   /* begin CHECKOUT */
 
   .hikashop_cart_module {
+    position: relative;
     top: 0;
     background: #BABABA;
     padding: 20px;
@@ -3145,7 +3145,7 @@ span {
   }
   tfoot .hikashop_product_price_full {
     font-size: 1.5em;
-  }
+  }          
   /* end CHECKOUT */            
 
 
