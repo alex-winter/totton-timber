@@ -2728,7 +2728,7 @@ table.adminlist th a {
   */
   background: #c10505;
   position: relative;
-  height: 150px;
+  height: 180px;
 }
 .logo {
   float: left;
@@ -2913,6 +2913,8 @@ span {
     color: #333;
   }
 
+  .toggle-symbol {display: none;}
+
   .category_nav .nav {
     width: 100%;
     position: relative;
@@ -2920,22 +2922,51 @@ span {
 
     .category_nav .nav a {
       display: block;
-      width: 100%;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       text-decoration: none;
+      font-weight: 500;
+      font-size: 1.0em;
+      color: #333;
     }
+    .category_nav .nav .toggle-symbol {display: block;}
 
-      .category_nav .nav > li a {
-        padding: 20px;
+      .category_nav .nav > li {
         background-color: #b6b5b5;
         margin-bottom: 2px;
         color: #333;
-      }.category_nav .nav > li a:hover {
+        text-transform: uppercase;
+        display: inline-flex;
+        width: 100%;
+      }.category_nav .nav > li.active,
+       .category_nav .nav > li:hover {
         background-color: #e20000;
         color: #fff;
+      }.category_nav .nav > li.active .toggle-symbol,
+       .category_nav .nav > li:hover > .toggle-symbol {
+        background-color: #c10505;
+      }.category_nav .nav > li.active  > a,
+       .category_nav .nav > li:hover > a {
+        background-color: transparent;
+        color: #fff;
       }
+
+        .category_nav .nav > li .toggle-symbol,
+        .category_nav .nav > li > a {
+          display: inline;
+          height: 100%;
+        }
+        .category_nav .nav > li .toggle-symbol {
+          font-size: 3.0em;
+          background: #565656;
+          color: #fff;
+          padding: 20px;
+        }
+        .category_nav .nav > li > a {
+          width: auto;
+          padding: 20px 0 20px 10px;
+        }
         .category_nav .nav > li > ul {
           width: 100%;
           display: none;
@@ -2950,7 +2981,6 @@ span {
             padding: 10px 50px;
             background-color: #cfcfcf;
           }
-/* end ADDITIONS */
 
       .category_nav .nav .active > a {
         background-color: #e20000;
@@ -3002,11 +3032,13 @@ span {
           font-size: 1.2em;
         }
 
+        .t3-copyright {
+          display: none !important;
+        }
+
 /* end ADDITIONS */
 
 /* begin HIKASHOP */
-
-  /* begin CHECKOUT */
 
   /* begin CHECKOUT */
 

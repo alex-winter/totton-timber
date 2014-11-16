@@ -56,7 +56,7 @@ if (is_array($list)) :
 			$class = ' class="'.trim($class) .'"';
 		}
 
-		echo '<li'.$class.'>';
+		echo '<li'.$class.'><div class="toggle-symbol">+</div>';
 
 		// Render the menu item.
 		switch ($item->type) :
