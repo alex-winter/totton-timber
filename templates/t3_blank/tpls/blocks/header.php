@@ -18,7 +18,7 @@ $logoimgsm = ($logotype == 'image' && $this->params->get('enable_logoimage_sm', 
   <div class="row">
 
     <!-- LOGO -->
-    <div class="span8 logo">
+    <div class="logo">
       <div class="logo-<?php echo $logotype, ($logoimgsm ? ' logo-control' : '') ?>">
         <a href="<?php echo JURI::base(true) ?>" title="<?php echo strip_tags($sitename) ?>">
           <?php if($logotype == 'image'): ?>
@@ -35,10 +35,10 @@ $logoimgsm = ($logotype == 'image' && $this->params->get('enable_logoimage_sm', 
     <!-- //LOGO -->
 
     <?php if($this->countModules('head-search or languageswitcherload')): ?>
-    <div class="span4 clearfix">  
+    <div class="">  
       <?php if ($this->countModules('head-search')) : ?>
       <!-- HEAD SEARCH -->
-      <div class="head-search<?php $this->_c('head-search')?>">     
+      <div class="header-content head-search<?php $this->_c('head-search')?>">     
         <jdoc:include type="modules" name="<?php $this->_p('head-search') ?>" style="raw" />
       </div>
       <!-- //HEAD SEARCH -->

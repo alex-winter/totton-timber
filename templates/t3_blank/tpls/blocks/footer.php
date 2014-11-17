@@ -16,21 +16,23 @@ defined('_JEXEC') or die;
     <?php $this->spotlight ('footnav', 'footer-1, footer-2, footer-3, footer-4, footer-5, footer-6') ?>
   </div>
   <!-- //FOOT NAVIGATION -->
-
+  
+  <!-- 
   <section class="t3-copyright">
     <div class="container">
       <div class="row">
-        <div class="<?php echo $this->getParam('t3-rmvlogo', 1) ? 'span8' : 'span12' ?> copyright<?php $this->_c('footer')?>">
-          <jdoc:include type="modules" name="<?php $this->_p('footer') ?>" />
+        <div class="<?php //echo $this->getParam('t3-rmvlogo', 1) ? 'span8' : 'span12' ?> copyright<?php //$this->_c('footer')?>">
+          <jdoc:include type="modules" name="<?php //$this->_p('footer') ?>" />
         </div>
-        <?php if($this->getParam('t3-rmvlogo', 1)): ?>
+        <?php //if($this->getParam('t3-rmvlogo', 1)): ?>
         <div class="span4 poweredby">
-          <a class="t3-logo t3-logo-light" href="http://t3-framework.org" title="<?php echo JText::_('T3_POWER_BY_TEXT') ?>" target="_blank" <?php echo method_exists('T3', 'isHome') && T3::isHome() ? '' : 'rel="nofollow"' ?>><?php echo JText::_('T3_POWER_BY_HTML') ?></a>
+          <a class="t3-logo t3-logo-light" href="http://t3-framework.org" title="<?php //echo JText::_('T3_POWER_BY_TEXT') ?>" target="_blank" <?php //echo method_exists('T3', 'isHome') && T3::isHome() ? '' : 'rel="nofollow"' ?>><?php //echo JText::_('T3_POWER_BY_HTML') ?></a>
         </div>
-        <?php endif; ?>
+        <?php //endif; ?>
       </div>
     </div>
   </section>
+  -->
 
 </footer>
 <!-- //FOOTER -->

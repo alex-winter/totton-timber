@@ -2732,6 +2732,7 @@ table.adminlist th a {
 }
 .logo {
   float: left;
+  width: 20%;
 }
 .logo a {
   display: inline-block;
@@ -2919,7 +2920,6 @@ span {
     width: 100%;
     position: relative;
   }
-
     .category_nav .nav a {
       display: block;
       -webkit-box-sizing: border-box;
@@ -2930,7 +2930,7 @@ span {
       font-size: 1.0em;
       color: #333;
     }
-    .category_nav .nav .toggle-symbol {display: block;}
+    .category_nav .nav .toggle-symbol { display: block; }
 
       .category_nav .nav > li {
         background-color: #b6b5b5;
@@ -2943,6 +2943,7 @@ span {
        .category_nav .nav > li:hover {
         background-color: #e20000;
         color: #fff;
+        cursor: pointer;
       }.category_nav .nav > li.active .toggle-symbol,
        .category_nav .nav > li:hover > .toggle-symbol {
         background-color: #c10505;
@@ -2968,9 +2969,12 @@ span {
           padding: 20px 0 20px 10px;
         }
         .category_nav .nav > li > ul {
+          clear: both;
+          float: left;
           width: 100%;
           display: none;
         }
+          .category_nav .nav > li > ul .toggle-symbol { display: none; }
           .category_nav .nav > li > ul > li > a {
             width: 100%;
             padding: 10px 35px;
@@ -3036,6 +3040,45 @@ span {
           display: none !important;
         }
 
+  .header-content {
+    width: 80%;
+    position: relative;
+  }
+
+  .nav.header-nav {
+    padding-top: 35px;
+    width: auto;
+    float: left;
+  }
+    .nav.header-nav li {
+      display: inline-block;
+      border-right: 1px solid #fff;
+    }.nav.header-nav li:last-child {
+      border: none;
+    }
+      .nav.header-nav li a {
+        color: #fff;
+        display: inline-block;
+        padding: 10px;
+      }
+
+  .header-search {
+    float: left;
+    clear: both;
+  }
+    .header-search .btn,
+    .header-search #mod-search-searchword {
+      height: 34px;
+    }
+    .header-search #mod-search-searchword {
+      background: #fff;
+      padding: 5px;
+      float: left;
+      border-radius: 5px 0 0 5px;
+    }
+    .header-search .btn {
+      border-radius: 0 5px 5px 0;
+    }
 /* end ADDITIONS */
 
 /* begin HIKASHOP */
@@ -3043,8 +3086,9 @@ span {
   /* begin CHECKOUT */
 
   .hikashop_cart_module {
-    position: relative;
+    position: absolute;
     top: 0;
+    right: 0;
     background: #BABABA;
     padding: 20px;
     border-radius: 0 0 10px 10px; 
