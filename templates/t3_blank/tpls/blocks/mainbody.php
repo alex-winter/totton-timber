@@ -21,7 +21,7 @@ defined('_JEXEC') or die;
       "tablet"  : [ "span12"        , "span6 spanfirst"   , "span6"             ]
     },
     "one_sidebar1": {
-      "default" : [ "span9 pull-right"         , "span3"             ],
+      "default" : [ "col-md-4"         , "col-md-8"             ],
       "wide"    : [],
       "xtablet" : [ "span8 pull-right"         , "span4"             ],
       "tablet"  : [ "span12"        , "span12 spanfirst"  ]
@@ -57,13 +57,6 @@ defined('_JEXEC') or die;
 
 <div id="t3-mainbody" class="container t3-mainbody">
   <div class="row">
-    
-    <!-- MAIN CONTENT -->
-    <div id="t3-content" class="t3-content <?php echo $this->getClass($layout, $col) ?>" <?php echo $this->getData ($layout, $col++) ?>>
-      <jdoc:include type="message" />
-      <jdoc:include type="component" />
-    </div>
-    <!-- //MAIN CONTENT -->
 
     <?php if ($this->countModules($sidebar1)) : ?>
     <!-- SIDEBAR 1 -->
@@ -72,6 +65,13 @@ defined('_JEXEC') or die;
     </div>
     <!-- //SIDEBAR 1 -->
     <?php endif ?>
+    
+    <!-- MAIN CONTENT -->
+    <div id="t3-content" class="t3-content <?php echo $this->getClass($layout, $col) ?>" <?php echo $this->getData ($layout, $col++) ?>>
+      <jdoc:include type="message" />
+      <jdoc:include type="component" />
+    </div>
+    <!-- //MAIN CONTENT -->
     
     <?php if ($this->countModules($sidebar2)) : ?>
     <!-- SIDEBAR 2 -->

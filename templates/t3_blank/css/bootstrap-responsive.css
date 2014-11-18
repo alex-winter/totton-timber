@@ -1,4 +1,4 @@
-
+/*
 
 .hidden {
   display: none;
@@ -59,7 +59,7 @@
 @media (min-width: 1200px) {
   .row {
     /* ##edit margin-left: -40px; 
-    edit is in Additions in template.css*/
+    edit is in Additions in template.css
     *zoom: 1;
   }
   .row:before,
@@ -80,8 +80,8 @@
   .navbar-static-top .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
-    /*##old width: 1196px;*/
-    /*##new*/ width: 100%;
+    /*##old width: 1196px;
+    /*##new width: 100%;
   }
   .span12 {
     width: 1196px;
@@ -387,7 +387,7 @@
 @media (min-width: 768px) and (max-width: 979px) {
   .row {
     /* ##edit margin-left: -40px; 
-    edit is in Additions in template.css*/
+    edit is in Additions in template.css
     *zoom: 1;
   }
   .row:before,
@@ -1037,3 +1037,4 @@
   }
 }
 
+*/

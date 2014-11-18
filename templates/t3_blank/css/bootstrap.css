@@ -1,4 +1,4 @@
-
+/*
 
 .clearfix {
   *zoom: 1;
@@ -195,7 +195,7 @@ textarea {
 
 .row {
   /* ##edit margin-left: -40px; 
-  edit is in Additions in template.css*/
+  edit is in Additions in template.css
   *zoom: 1;
 }
 .row:before,
@@ -594,7 +594,7 @@ input,
 button,
 select,
 textarea {
-  /* ##delete font-family: sans-serif; */
+  /* ##delete font-family: sans-serif; 
 }
 label {
   display: block;
@@ -4646,7 +4646,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search .search-query {
   margin-bottom: 0;
   padding: 4px 14px;
-  /* ##delete font-family: sans-serif; */
+  /* ##delete font-family: sans-serif; 
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -5782,3 +5782,4 @@ input[type="submit"].btn.btn-mini {
   position: fixed;
 }
 
+*/
