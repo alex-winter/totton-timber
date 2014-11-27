@@ -2406,3 +2406,359 @@ a.list-group-item.active:focus .list-group-item-text {
   opacity: .8;
   display: inline-block;
 }
+
+/*<-ADDITIONS*/
+
+  /*<-UNIVERSAL*/
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      padding: 0;
+      margin: 0; }
+    h1 {
+      font-weight: 300;
+      font-size: 3.0em;
+      font-variant: normal;
+      font-style: normal; }
+    h2 {
+      font-weight: 300;
+      font-size: 2.8em;
+      font-variant: normal;
+      font-style: normal; }
+    h3 {
+      font-weight: 300;
+      font-size: 2.4em;
+      font-variant: normal;
+      font-style: normal; }
+    h4 {
+      font-weight: 300;
+      font-size: 2.0em;
+      font-variant: normal;
+      font-style: normal; }
+    h5 {
+      font-weight: 300;
+      font-size: 1.8em;
+      font-variant: normal;
+      font-style: normal; }
+    p, a,
+    b, strong {
+      font-family: Sans-serif;
+      font-weight: 300;
+      font-size: 1.1em;
+      font-variant: normal;
+      font-style: normal; }
+    b, strong {
+      font-weight: 400; }
+
+    .container {
+      width: 100%;
+    }
+      .container.t3-sl  {
+        padding: 20px 0;
+      }
+    .row {
+      width: 80%;
+      margin: 0 auto;
+    }
+  /*UNIVERSAL->*/
+
+  /*<-TOP MENU*/
+  .off-canvas-toggle,
+  .t3-mainnav { display: none; }
+  @media (max-width: 767px) {
+    .t3-mainnav { display: block; }
+    .header-nav { display: none; }
+  }
+  /*TOP MENU->*/
+
+  /*<-HEADER*/
+    
+    .t3-header {
+      height: auto;
+      background: #c10505;
+      padding: 0; }
+
+    /*<-LOGO*/
+    .logo-image,
+    .logo-image a,
+    .logo-image a img {
+      height: 225px; }
+    /*LOGO->*/
+    
+    /*<-NAVIGATION*/
+    .nav.header-nav {
+      padding-top: 35px;
+      width: auto;
+      float: left; }
+      .nav.header-nav li {
+        display: inline-block;
+        border-right: 1px solid #fff;
+      }.nav.header-nav li:last-child {
+        border: none; }
+        .nav.header-nav li a {
+          color: #fff;
+          display: inline-block;
+          padding: 10px; }
+        .nav.header-nav li:hover > a {
+          background: rgba(255, 255, 255, 0.7);
+          color: #920000;
+          border-radius: 0; }
+        .nav.header-nav li.current a,
+        .nav.header-nav li.active a {
+          background: #fff;
+          color: #C10505;
+          border-radius: 0; }
+
+    /*NAVIGATION->*/
+
+    /*<-SEARCH*/
+    .header-search {
+      float: left;
+      clear: both;
+      width: 100%;
+      margin-top: 30px; }
+      .header-search .btn,
+      .header-search #mod-search-searchword {
+        height: 34px; }
+      .header-search #mod-search-searchword {
+        background: #fff;
+        padding: 5px;
+        float: left;
+        border-radius: 5px 0 0 5px; }
+      .header-search .btn {
+        border-radius: 0 5px 5px 0; }
+    /*SEARCH->*/
+
+    /*<-CART*/
+    .hikashop_cart_module {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #BABABA;
+      padding: 20px;
+      border-radius: 0 0 10px 10px; 
+      width: 320px; }
+      .hikashop_cart {
+        width: 100%; }
+        .form-outer {
+          margin-top: 30px;
+          width: 360px;
+          overflow: hidden;
+          position: absolute;
+          left: -20px;
+          padding: 0 20px;
+          padding-bottom: 20px; }
+          .form-outer form {
+            display: none;
+            z-index: 99;
+            position: relative;
+            /*left: 20px;*/
+
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 0;
+
+            border-radius: 0 0 10px 10px;
+            background: #9b9b9b;
+            -moz-box-shadow: 0px 0px 15px #333;
+            -webkit-box-shadow: 0px 0px 15px #333;
+            box-shadow: 0px 0px 15px #333; }
+            .hikashop_cart form table {
+              display: table;
+              padding: 20px; }
+              .hikashop_cart form table thead {
+                width: 100%;
+                background: #e7e7e7; }
+                .hikashop_cart form table thead tr > th {
+                  background: #e7e7e7;
+                  padding: 5px 2px !important;
+                  font-size: 1.2em;
+                  font-weight: 500; }
+              .hikashop_cart form table tbody {
+                width: 100%; }
+                .hikashop_cart form table tbody > tr {
+                  height: 35px; }
+                  .hikashop_cart form table tbody > tr a {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    padding: 10px 0;
+                    font-weight: 300;
+                    font-size: 1.2em;
+                    color: #fff !important; }
+                    .hikashop_cart form table tbody tr:hover > td a {
+                      color: #333 !important; }
+                  .hikashop_cart form table tbody > tr a[title="delete"] {
+                    
+                  }    
+              .hikashop_cart form table tfoot {
+                width: 100%;
+                background: #e7e7e7;
+                height: 10px;
+                padding: 0 0 10px 0 !important; } 
+                .hikashop_cart form table tfoot tr:last-child {
+                  height: 30px !important; }
+          .hikashop_cart form .hikashop_cart_input_button {
+            width: 100%;
+            background: #00A004;
+            border: none;
+            border-radius: 4px;
+            border-bottom: 2px solid #003800;
+            padding: 5px 0px;
+            color: #ffffff !important;
+            content: attr(value); }
+            .hikashop_cart form .hikashop_cart_input_button:hover {
+              background: #0bbc0e;
+            }
+
+      .cart-mini-container {
+        width: 100%;
+        height: 40px; }
+        .cart-mini-container .cart-mini-button {
+          width: 60%;
+          float: left;
+          padding-top: 5px; }
+        .cart-mini-container .cart-mini-data {
+          width: 40%;
+          float: left; }
+          .cart-mini-container .cart-mini-data p,
+          .cart-mini-container .cart-mini-data span {
+            color: #fff;
+            text-align: right;
+            font-size: 1.2em;
+            padding: 0; margin: 0; }
+          .cart-mini-container .hikashop_product_price {
+            font-size: 1.0em !important;
+            color: #547f00 !important; }
+      .hikashop_cart_module_product_quantity_value {
+        padding-top: 10px !important; }
+        .hikashop_cart_module_product_quantity_value input {
+          border: none;
+          background-color: #9b9b9b;
+          color: #fff; }
+      .hikashop_cart_module_product_total_title {
+        font-weight: 700;
+        font-size: 1.3em; }
+      tbody .hikashop_product_price_full {
+        padding-top: 10px; }
+      tfoot .hikashop_product_price_full {
+        font-size: 1.5em; 
+      }       
+    /*CART->*/
+
+  /*HEADER->*/
+
+  /*<-SIDENAV*/
+  .category_nav.nav {
+    width: 100%;
+    position: relative;
+  }
+    .category-list-item {
+      width: 80%;
+
+    }
+    .category_nav.nav a {
+      display: block;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.0em;
+      color: #333;
+      padding: 20px;
+      float: left;
+    }
+    .category_nav.nav .toggle-symbol { display: block; }
+
+      .category_nav.nav > li {
+        background-color: #b6b5b5;
+        color: #333;
+        text-transform: uppercase;
+        width: 100%;
+        float: left;
+      }.category_nav.nav > li.active,
+       .category_nav.nav > li:hover {
+        background-color: #e20000;
+        color: #fff;
+        cursor: pointer;
+      }.category_nav.nav > li.active .toggle-symbol,
+       .category_nav.nav > li:hover > .toggle-symbol {
+        background-color: #c10505;
+      }.category_nav.nav > li.active  > a,
+       .category_nav.nav > li:hover > a {
+        background-color: transparent;
+        color: #fff;
+      }
+
+        .category_nav.nav > li .toggle-symbol,
+        .category_nav.nav > li > a {
+          display: inline;
+          height: 100%;
+        }
+        .category_nav.nav > li .toggle-symbol {
+          font-size: 3.0em;
+          background: #565656;
+          color: #fff;
+          padding: 20px;
+        }
+        .category_nav.nav > li > a {
+          padding: 20px 0 20px 10px;
+        }
+        .category_nav.nav .dropdown-menu {
+          position: relative;
+          min-width: none;
+          margin: 0;
+          background-color: transparent;
+          border: none;
+          padding: 0;
+        }
+        .category_nav.nav > li > ul {
+          clear: both;
+          float: left;
+          width: 100%;
+          display: none;
+          box-shadow: none;
+        }
+          .category_nav.nav > li > ul .toggle-symbol { display: none; }
+          .category_nav.nav > li > ul > li > a {
+            width: 100%;
+            padding: 10px 35px;
+            background-color: #cfcfcf;
+          }
+          .category_nav.nav > li > ul > li > ul > li > a {
+            width: 100%;
+            padding: 10px 50px;
+            background-color: #cfcfcf;
+          }
+
+      .category_nav.nav .active > a {
+        background-color: #e20000;
+        color: #fff;
+      }.category_nav.nav .active > a:hover,
+       .category_nav.nav .active > a:active{
+        background-color: #ff0000;
+        color: #fff;
+      }
+  /*SIDENAV->*/
+
+  /*<-PRODUCTS*/
+
+    /*<-CATEGORIES LIST*/
+
+    /*CATEGORIES LIST->*/
+
+    /*<-PRODUCTS LIST*/
+
+    /*PRODUCTS LIST->*/
+
+    /*<-PRODUCT PAGE*/
+
+    /*PRODUCT PAGE->*/
+
+  /*PRODUCTS->*/
+
+  /*<-FOOTER*/
+
+  /*FOOTER->*/
+
+/*ADDITIONS->*/
