@@ -1,4 +1,5 @@
 $.noConflict();
+
 jQuery( function($) {
 
 	//Element Funcitons

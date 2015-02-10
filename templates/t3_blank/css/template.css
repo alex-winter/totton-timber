@@ -3009,16 +3009,16 @@ span {
       border: 0px;
     }
       .hikashop_subcontainer.thumbnail .hikashop_category_image {
-        height: 100%;
+        height: 200px;
       }
         .hikashop_subcontainer.thumbnail .hikashop_category_image a {
           display: block;
-          width: 100%;
-          height: 100%;
+          height: 200px;
+
         }
           .hikashop_subcontainer.thumbnail .hikashop_category_image a img.hikashop_product_listing_image {
-            width: 100%;
             border-radius: 5px;
+            height: 200px;
           }
       .hikashop_subcontainer.thumbnail .hikashop_category_name {
         position: absolute;
@@ -3230,3 +3230,10 @@ span {
 
 
 /* end HIKASHOP */
+
+
+
+
+.hikashop_category_image {
+  height: 100px;
+}

@@ -54,8 +54,8 @@ class JConfig {
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
-	public $log_path = 'C:\\Users\\alex\\Documents\\GitHub\\totton-timber/logs';
-	public $tmp_path = 'C:\\Users\\alex\\Documents\\GitHub\\totton-timber/tmp';
+	public $log_path = 'C:\Users\alex\Documents\MEGAsync\git\totton-timber/logs';
+	public $tmp_path = 'C:\Users\alex\Documents\MEGAsync\git\totton-timber/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 	public $memcache_persist = '1';

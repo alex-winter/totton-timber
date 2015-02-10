@@ -2745,6 +2745,12 @@ a.list-group-item.active:focus .list-group-item-text {
 
     /*<-CATEGORIES LIST*/
 
+    .hikashop_category_image {
+      height: 200px;
+      display: block;
+      width: 100%;
+    }
+
     /*CATEGORIES LIST->*/
 
     /*<-PRODUCTS LIST*/

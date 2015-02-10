@@ -6,11 +6,12 @@ jQuery(document).ready( function() {
 		});
 	}
 
-	jQuery(".category_nav .nav a").click( function(e){
+	jQuery(".category_nav a").click( function(e){
 		e.preventDefault();
 	});
 
-	jQuery(".category_nav .nav li").click( function(){
+	jQuery(".category_nav li").click( function(){
+		alert('ya mumma');
 		var this_ul = jQuery(this).find("ul");
 		var this_link = jQuery(this).find("a").attr("href");
 
@@ -23,8 +24,8 @@ jQuery(document).ready( function() {
 		}
 	});
 
-	jQuery(".category_nav .nav > li").click( function(e){
+	jQuery(".category_nav > li").click( function(e){
 		e.preventDefault();
-		jQuery(".category_nav .nav > li ul").not($(this).find("ul")).hide(500);
+		jQuery(".category_nav > li ul").not($(this).find("ul")).hide(500);
 	});
 });

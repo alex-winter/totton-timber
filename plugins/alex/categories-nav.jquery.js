@@ -1,38 +1,44 @@
 
+function load_content(link) {
+	jQuery("#t3-content > *").fadeOut(150);
+	jQuery("#t3-content").load( link + " #t3-content > *", function(){
+		jQuery("#t3-content > *").fadeIn(150);
+		_gaq.push(['_trackPageview', link]);
+	});
+}
+
+jQuery(document).on('click', '.hikashop_container', function(e){
+	e.preventDefault();
+	//alert('clicked');
+	var me = jQuery(this);
+	var link = me.find("a").attr("href");
+	load_content(link);
+});
+
 jQuery( function($) {
-
-	function load_content(link) {
-		$("#t3-content > *").fadeOut(300);
-		$("#t3-content").load( link + " #t3-content > *", function(){
-			$("#t3-content > *").fadeIn(400);
-			//_gaq.push(['_trackPageview', link]);
-		});
-	}
-
-	$(".category-list-item").click( function(e){
+	$("ul.category_nav li").click( function(e){
 		e.preventDefault();
-		
-		var me = $(this);
-		var link = me.attr("href");
-		var ul = me.parent().find(".dropdown-menu");
-		var parent = me.parent("li");
-		var menu_items = $(".category_nav li");
-
+		var me = jQuery(this);
+		//alert(me.attr('class'));
+		var link = me.find('a').attr("href");
+		//alert(link);
+		var ul = me.find(".dropdown-menu");
+		var menu_items = jQuery('[class*="item-"]');
 		menu_items.each( function(){
-			var item = $(this);
+			var item = jQuery(this);
 			item.removeClass('current active');
-			item.find(".dropdown-menu").hide(500);	
+			//item.find(".dropdown-menu").hide(500);	
 		});
-
-		if ( me.parent().parent().hasClass('dropdown-menu')) {
-			alert("this is a sub item");
+		if ( me.parent().hasClass('dropdown-menu')) {
+			//alert("this is a sub item");
+			
 		} else {
-			alert("this is a root item");
+			//alert("this is a root item");
 			ul.toggle(500);
-		}
-		
-		parent.addClass('current active');
+		}	
+		me.addClass('current active');
 		load_content(link);
 	});
-
 });
+
+
